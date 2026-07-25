@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import { site } from "@/lib/site";
+import { CartProvider } from "@/components/tienda/CartContext";
+import { CartDrawer } from "@/components/tienda/CartDrawer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -65,7 +67,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es-AR" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
-        {children}
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

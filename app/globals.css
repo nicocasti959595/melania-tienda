@@ -12,6 +12,10 @@
   --gold: #b8895a;
   --rose: #e8c8c1;
   --cream: #f3e8e1;
+  --brand-50: #fdf4f5;
+  --brand-400: #b5546a;
+  --sale: #c62828;
+  --grad-brand: linear-gradient(100deg, #b03a52, #7a1c2e 45%, #5a1424);
 }
 
 @theme inline {
@@ -26,6 +30,9 @@
   --color-gold: var(--gold);
   --color-rose: var(--rose);
   --color-cream: var(--cream);
+  --color-brand-50: var(--brand-50);
+  --color-brand-400: var(--brand-400);
+  --color-sale: var(--sale);
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);
 }
@@ -90,6 +97,20 @@ html, body {
 }
 
 .shadow-soft { box-shadow: 0 30px 60px -30px rgba(80, 30, 40, .25); }
+
+.grad-brand { background-image: var(--grad-brand); }
+
+.embla-track { display: flex; touch-action: pan-y pinch-zoom; }
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .floaty { animation: none !important; }
+  * { transition-duration: .01ms !important; }
+}
 
 .grain::before {
   content: "";
