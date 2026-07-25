@@ -3,7 +3,7 @@ export const site = {
   tagline: "Boutique de mujer · Villa Urquiza",
   description:
     "Indumentaria femenina seleccionada con detalle. Vestidos, blusas, pantalones, sweaters y accesorios para todos los días, en pleno corazón de Villa Urquiza.",
-  url: "https://melania-tienda.vercel.app",
+  url: "https://melania.sumapyme.com.ar",
   // Datos de contacto de DEMO — reemplazar por reales del local
   whatsapp: "5491112345678",
   whatsappPretty: "+54 9 11 1234-5678",
