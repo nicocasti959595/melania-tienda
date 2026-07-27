@@ -4,7 +4,7 @@ import { Colecciones } from "@/components/Colecciones";
 import { Productos } from "@/components/Productos";
 import { Beneficios } from "@/components/Beneficios";
 import { Nosotras } from "@/components/Nosotras";
-import { Testimonios } from "@/components/Testimonios";
+import { Resenas } from "@/components/Resenas";
 import { Visitanos } from "@/components/Visitanos";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
@@ -19,7 +19,7 @@ export default function Home() {
         <Colecciones />
         <Productos />
         <Nosotras />
-        <Testimonios />
+        <Resenas />
         <Visitanos />
       </main>
       <Footer />

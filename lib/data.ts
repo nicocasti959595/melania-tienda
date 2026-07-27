@@ -71,7 +71,7 @@ export const productos: Producto[] = [
     nombre: "Blusa Clara",
     categoria: "Blusas",
     precio: 42500,
-    imgs: [U("1551163943-3f7253a97c64"), U("1564257631407-4deb1f99d992"), U("1485462537746-965f33f7f6a7")],
+    imgs: [U("1554568218-0f1715e72254"), U("1564257631407-4deb1f99d992"), U("1485462537746-965f33f7f6a7")],
     stock: true,
     detalle: "Blusa de seda lavada, escote redondo y mangas francesas.",
     descripcion:
@@ -192,7 +192,7 @@ export const productos: Producto[] = [
     categoria: "Abrigos",
     precio: 195000,
     precioOferta: 168000,
-    imgs: [U("1539109136881-3be0616acf4b"), U("1548624313-0396c75f8f1d"), U("1591047139829-d91aecb6caea"), U("1520975954732-35dd22299614")],
+    imgs: [U("1539109136881-3be0616acf4b"), U("1578932750294-f5075e85f44a"), U("1591047139829-d91aecb6caea"), U("1520975954732-35dd22299614")],
     stock: true,
     detalle: "Tapado largo en paño doble faz, color camel.",
     descripcion:
@@ -270,8 +270,78 @@ export const beneficios = [
   { t: "Curaduría local", d: "Marcas argentinas seleccionadas + capsulas propias de Villa Urquiza." },
 ];
 
-export const testimonios = [
-  { n: "Sofía R.", c: "Vine por un vestido y me fui con tres looks armados. Atención impecable." },
-  { n: "Mariana L.", c: "La calidad de las prendas se nota. Y los cortes favorecen un montón." },
-  { n: "Carla B.", c: "Mi lugar fijo para regalos. Siempre encuentro algo distinto y bien hecho." },
+export type Resena = {
+  autor: string;
+  inicial: string;
+  avatar: string;
+  rating: number;
+  cuando: string;
+  texto: string;
+};
+
+/**
+ * ⚠️ DEMO: reseñas de ejemplo, NO son reseñas reales de Google.
+ * Para producción, reemplazar por el feed real del Google Business Profile
+ * (Places API → place_id del local) y borrar el aviso de <Resenas />.
+ */
+export const resenas: Resena[] = [
+  {
+    autor: "Sofía Rinaldi",
+    inicial: "S",
+    avatar: "#7a1c2e",
+    rating: 5,
+    cuando: "hace 2 semanas",
+    texto:
+      "Vine por un vestido para un casamiento y me fui con tres looks armados. Me hicieron probar cosas que sola no hubiera agarrado nunca y quedaron bárbaras. Atención impecable.",
+  },
+  {
+    autor: "Mariana López",
+    inicial: "M",
+    avatar: "#b8895a",
+    rating: 5,
+    cuando: "hace 1 mes",
+    texto:
+      "La calidad de las prendas se nota apenas las tocás. Compré un sastrero hace un año y sigue como nuevo. Los cortes favorecen un montón.",
+  },
+  {
+    autor: "Carla Benítez",
+    inicial: "C",
+    avatar: "#5d6047",
+    rating: 5,
+    cuando: "hace 1 mes",
+    texto:
+      "Mi lugar fijo para regalos. Siempre encuentro algo distinto y bien hecho, y te lo envuelven divino. Nunca fallé.",
+  },
+  {
+    autor: "Lucía Ferreyra",
+    inicial: "L",
+    avatar: "#a23448",
+    rating: 4,
+    cuando: "hace 2 meses",
+    texto:
+      "Muy buena selección y precios razonables para la calidad. Le saco una estrella porque el local se llena los sábados a la tarde y hay que esperar el probador.",
+  },
+  {
+    autor: "Andrea Sosa",
+    inicial: "A",
+    avatar: "#8a6b73",
+    rating: 5,
+    cuando: "hace 3 meses",
+    texto:
+      "Pedí por WhatsApp desde Vicente López, me mandaron fotos reales de cómo quedaba y llegó al otro día. Todo un lujo la atención.",
+  },
+  {
+    autor: "Paula Giménez",
+    inicial: "P",
+    avatar: "#41608c",
+    rating: 5,
+    cuando: "hace 4 meses",
+    texto:
+      "Fui sin saber bien qué buscaba y salí con el placard resuelto para la temporada. Te asesoran de verdad, no te venden por vender.",
+  },
 ];
+
+export const resumenGoogle = {
+  promedio: 4.9,
+  total: 87,
+};
